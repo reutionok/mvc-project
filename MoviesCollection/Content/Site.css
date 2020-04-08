@@ -1,0 +1,79 @@
+﻿body {
+    padding-top: 50px;
+    padding-bottom: 20px;
+    padding-left: 40px;
+    font-size: 18px;
+    font-weight:500;
+    font-family: Verdana, Arial, Helvetica, Sans-Serif;
+    background-color: #f7f7fa;
+    background-image: url("Images/123.jpg");
+}
+
+/* Set padding to keep content from hitting the edges */
+.body-content {
+   
+    margin-top: 30px;
+    padding-left: 15px;
+    padding-right: 15px;
+}
+
+/* Override the default bootstrap behavior where horizontal description lists 
+   will truncate terms that are too long to fit in the left column 
+*/
+.dl-horizontal dt {
+    white-space: normal;
+}
+
+/* Set width on the form input elements since they're 100% wide by default */
+input,
+select,
+textarea {
+    max-width: 280px;
+}
+
+nav {
+    display: block;
+    
+}
+
+.menu {
+    padding-left: 10px;
+}
+
+    .menu ul {
+        list-style: none;
+    }
+
+    .menu li {
+        display: inline;
+    }
+
+    .menu a:hover {
+        color: red;
+    }
+
+table {
+    vertical-align: middle;
+    text-align: left;
+}
+
+.header {
+    font-weight: bold;
+}
+
+td {
+    padding-right: 10px;
+}
+
+input {
+    width: 150px;
+}
+.video {
+        margin-top: 30px;
+}
+
+.list_films {
+    background-color: rgba(192, 192, 192, 0.9);
+    margin-top: 20px;
+}
+
