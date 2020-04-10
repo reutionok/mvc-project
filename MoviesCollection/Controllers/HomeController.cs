@@ -86,7 +86,8 @@ namespace MoviesCollection.Controllers
 
                 return RedirectToAction("Index");
             }
-            return View(film);
+
+            return RedirectToAction("Create");
         }
 
         protected override void Dispose(bool disposing)
@@ -95,4 +96,5 @@ namespace MoviesCollection.Controllers
             base.Dispose(disposing);
         }
     }
+
 }
