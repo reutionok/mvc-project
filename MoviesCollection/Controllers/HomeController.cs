@@ -58,38 +58,7 @@ namespace MoviesCollection.Controllers
             return View(film);
         }
 
-        [HttpGet]
-        public ActionResult Create()
-        {
-            SelectList genres = new SelectList(db.Genres, "Id", "Name"); 
-            ViewBag.Genres = genres;
-            return View();
-        }
-
-        [HttpPost]
-        [ValidateAntiForgeryToken]
-        public ActionResult Create(Film film, HttpPostedFileBase uploadImage)
-        {
-            if (ModelState.IsValid && uploadImage != null)
-            {
-                byte[] imageData = null;
-                // считываем переданный файл в массив байтов
-                using (var binaryReader = new BinaryReader(uploadImage.InputStream))
-                {
-                    imageData = binaryReader.ReadBytes(uploadImage.ContentLength);
-                }
-                // установка массива байтов
-                film.Poster = imageData;
-                film.Genre = db.Genres.Where(g => g.Id == film.idGenre).FirstOrDefault();
-                db.Films.Add(film);
-                db.SaveChanges();
-
-                return RedirectToAction("Index");
-            }
-
-            return RedirectToAction("Create");
-        }
-
+       
         protected override void Dispose(bool disposing)
         {
             db.Dispose();

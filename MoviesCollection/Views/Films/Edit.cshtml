@@ -1,14 +1,16 @@
 ﻿@model MoviesCollection.Models.Film
 
 @{
-    ViewBag.Title = "Create";
+    ViewBag.Title = "Edit";
     Layout = "~/Views/Shared/_Layout.cshtml";
 }
-<script src="~/Scripts/jquery.validate.js"></script>
 
-<h2>Добавь свой любимый фильм</h2>
+<h2>Редактировать выбранный фильм</h2>
+<div>
+    @Html.ActionLink("Вернуться к списку ", "Index")
+</div>
 
-@using (Html.BeginForm("Create", "Home", FormMethod.Post, new { enctype = "multipart/form-data" }))
+@using (Html.BeginForm("Edit", "Films", FormMethod.Post, new { enctype = "multipart/form-data" }))
 {
     @Html.AntiForgeryToken()
 
@@ -80,9 +82,10 @@
 
         <div class="form-group">
             <div class="col-md-offset-2 col-md-10">
-                <input type="submit" value="Добавить" class="btn btn-default" />
+                <input type="submit" value="Save" class="btn btn-default" />
             </div>
         </div>
     </div>
 }
+
 
