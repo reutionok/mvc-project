@@ -70,7 +70,7 @@ namespace MoviesCollection.Controllers
                 db.Films.Add(film);
                 db.SaveChanges();
 
-                return RedirectToAction("Index");
+                return RedirectToAction("Index", "Home");
             }
 
             return RedirectToAction("Create");
